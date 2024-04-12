@@ -1,0 +1,30 @@
+.header  {
+    /* position: fixed; */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* padding: 2rem 10%; */
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    margin: 10px 40px 0px 0px;
+    background-color: rgb(31, 65, 128);
+}
+
+.header a{
+    color: rgb(211, 220, 236);
+    text-decoration: none;
+    color: black;
+    font-family: system-ui;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.header a,:hover{
+    color: violet;
+    text-transform: uppercase;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, -2);
+}
