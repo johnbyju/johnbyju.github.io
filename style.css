@@ -19,6 +19,13 @@
     color: var(--text-color); 
   }
 
+  .profile{
+    align-items: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   :root {
      /** Background colors */
      --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
