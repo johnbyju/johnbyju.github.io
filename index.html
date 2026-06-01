@@ -3,431 +3,333 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="keywords" content="JohnbyjuPortfolio" />
-    <meta name="description" content="Hey.. I'm John Byju & This is my Portfolio" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Johnbyju-Portfolio</title>
-    <!-- <link rel="icon" href="src/imges/img.myimg.webp"> -->
-<!--     <link rel="stylesheet" href="style.css" /> -->
-    <link rel="icon" href="./src/imges/sticker.png" >
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
-
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .iframe-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <meta name="description" content="John Byju — Full Stack Developer portfolio. Node.js, React, and modern web apps." />
+    <meta name="keywords" content="John Byju, Full Stack Developer, React, Node.js, Portfolio" />
+    <meta name="author" content="John Byju" />
+    <title>John Byju | Full Stack Developer</title>
+    <link rel="icon" href="assets/img/sticker.png" type="image/png" sizes="any" />
+    <link rel="shortcut icon" href="assets/img/sticker.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/sticker.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="body">
-    <div class="container">
-        <div class="iframe-container">
-            <iframe src="./constrc.html"></iframe>
-        </div>
+<body>
+    <div class="bg-gradient" aria-hidden="true"></div>
 
-    <!------------- NAVBAR ------------>
-<!--     <header class="header">
-        <a href="#" class="logo">JOHN</a>
-        <i class="menu-icon"></i>
-        <nav>
-            <a class="nav-home" href="#header">Header</a>
-            <a class="nav-about" href="#skills">Skills</a>
-            <a class="nav-projects" href="#projects">Projects</a>
-            <a class="nav-contact" href="#contact">Contact</a>
+    <header class="header" id="header">
+        <a href="#home" class="logo" aria-label="John Byju home">
+            <img
+                src="assets/img/signature.png"
+                alt=""
+                class="logo-img"
+                width="140"
+                height="48"
+                onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+            />
+            <span class="logo-text" hidden>John<span>.</span></span>
+        </a>
+        <nav class="nav" id="nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#certifications" class="nav-link">Certificates</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
-    </header> -->
-    <!-- -------Navbar End----------->
+        <a href="https://github.com/johnbyju" class="btn btn-sm header-cta" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-github"></i> GitHub
+        </a>
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <i class="bx bx-menu"></i>
+        </button>
+    </header>
 
-
-    <!-- HOME -->
-<!--     <section class="home bg-home-color" id="home">
-        <div class="home-content">
-            <H3> hi! iam </H3>
-            <h1 id="user-detail-name"> John</h1>
-            <h3> I am a <br> <span class="multiple-text"></span></h3>
-            <img src="./src/imges/grin smile.png" height="550" width="500" class="profile" alt="">
-            <div class="social-media">
-                <a href="https://github.com/johnbyju/"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/johnbyju"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://x.com/itz_John14"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.instagram.com/johnbyju14/"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.facebook.com/johnbyju14"><i class='bx bxl-facebook'></i></a>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Home Section completed -->
-
-
-    <!-- About Section  Start-->
-
-<!--     <section id="about" class="about-section">
-        <h2 class="heading"><i class='bx bx-user'></i>About
-            <span>Me!</span>
-            <div class="about-content">
-                <h3>I am <span>John</span></h3>
-                <h3>Full Stack Engineer</h3>
-                <p id="user-details-intro">
-                    Iam Full Stack Developer based in Coimbatore,Tamilnadu,India
-                    my undergraduate degree in B.Com with specialization of Computer Application from Sree Ramu College
-                    of Arts and Science Pollachi,
-                    I have a strong passion for coding and building applications and websites. My area of expertise lies
-                    in utilizing NodeJS, ReactJS ,MongoDB and SQL to create WebApps and Websites
-                    I constantly strive to enhance my programming skills by learning new technologies and techniques,
-                    staying current with industry trends and best practices
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content reveal">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">John Byju</h1>
+                <p class="hero-role">
+                    I'm a <span class="typed-text" id="typed-text"></span><span class="cursor" aria-hidden="true">|</span>
                 </p>
+                <p class="hero-desc">
+                    Full stack developer from Coimbatore building fast, reliable web applications with
+                    JavaScript, React, and Node.js.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View my work</a>
+                    <a href="#contact" class="btn btn-outline">Get in touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/johnbyju" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/johnbyju/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://x.com/itz_John14" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://www.instagram.com/johnbyju14/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                </div>
             </div>
-        </h2>
-
-    </section> -->
-    <!-- About Section Completed-->
-
-
-    <!-- Skills Sefction -->
-
-<!--     <section id="skills" class="skills-section">
-
-        <div class="container tags">
-            <li>
-                <button class="skils-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node"
-                        height="32" width="32" loading="lazy" class="skills-card-name" />
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img" src="./images/react.png" width="32" height="32" loading="lazy" />
-
-                    <p class="skills-card-name">React</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="32"
-                        height="32" loading="lazy" />
-                    <p class="skills-card-name">NextJS </p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="./images/html" class="skills-card-img" width="32" height="32" loading="lazy" alt="HTML" />
-
-                    <p class="skills-card-name">HTML</p>
-                </button>
-            </li>
-
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="./images/css.png" class="skills-card-img" width="32" height="32" loading="lazy"
-                        alt="CSS" />
-
-                    <p class="skills-card-name">CSS</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                        class="skills-card-img" width="32" height="32" loading="lazy" alt="JavaScript" />
-
-                    <p class="skills-card-name">JavaScript</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                        class="skills-card-img" width="32" height="32" loading="lazy" alt="Express" />
-
-                    <p class="skills-card-name">Express</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="32"
-                        height="32" loading="lazy" />
-
-                    <p class="skills-card-name">MySQL</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                        width="32" height="32" loading="lazy" />
-
-                    <p class="skills-card-name">PostgreSQL</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                        class="skills-card-img" width="32" height="32" loading="lazy" alt="MongoDB" />
-                    <p class="skills-card-name">MongoDB</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
-                        class="skills-card-img" width="32" height="32" loading="lazy" alt="Mongoose" />
-
-                    <p class="skills-card-name">Socket.io</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="./images/redis.svg" class="skills-card-img" width="32" height="32" loading="lazy"
-                        alt="GIT" />
-
-                    <p class="skills-card-name">Redis</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="32"
-                        height="32" loading="lazy" class="skills-card-img" />
-
-                    <p class="skills-card-name">GIT</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img" src="./images/npm.svg" width="32" height="32" loading="lazy"
-                        alt="NPM" />
-
-                    <p class="skills-card-name">NPM</p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                        width="32" height="32" loading="lazy" />
-
-                    <p class="skills-card-name">Bootstrap </p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
-                        width="32" height="32" loading="lazy" />
-                    <p class="skills-card-name">Material UI </p>
-                </button>
-            </li>
-            <li>
-                <button class="skills-card tag-btn">
-                    <img class="skills-card-img"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="32"
-                        height="32" loading="lazy" />
-
-                    <p class="skills-card-name">VSCode</p>
-                </button>
-            </li>
-            </ul>
-        </div>
-
-        <div class="skills-container">
-            <div class="skills-card-1">
-                <i class='bx bx-code-alt' class="skills-card-img"></i>
-                <h3 class="skills-card-name">Front-End Development</h3>
-                <p>Vanilla JS | ReactJS | NextJS</p>
-                <a href="#" class="button">Read More</a>
+            <div class="hero-visual reveal">
+                <div class="hero-image-wrap">
+                    <img src="assets/img/sticker.png" alt="John Byju" class="hero-image" width="420" height="420" />
+                </div>
             </div>
-            <div class="skills-card-1">
-                <i class='bx bxs-data' class="skills-card-img"></i>
-                <h3 class="skills-card-name">Back-End Development</h3>
-                <p>NodeJS | SQL | MongoDB </p>
-                <a href="#" class="button">Read More</a>
-            </div>
-            <div class="skills-card-1">
-                <i class='bx bxl-codepen' class="skills-card-img"></i>
-                <h3 class="skills-card-name">Data Structure Algorithm</h3>
-                <p> LinkedList | Recursion | Binary </p>
-                <a href="#" class="button">Read More</a>
-            </div>
-        </div>
-    </section> -->
-    <!-- Skills Section End -->
+        </section>
 
-
-    <!-- Project Section Start -->
-
-<!--     <section class="project-section" id="projects">
-        <h2 class="heading">My
-            <span>Projects</span>
-        </h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="./images/Briefly.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">Briefly</h4>
-                    <p class="project-description"> This project is a simple URL shortener service, where users can
-                        input a long
-                        URL and get a shorter one in return..and will generate QR code also for URL and UPI</p>
-                    <h5 class="project-tech-stack">Redis | NodeJs | MongoDB | Express</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/lacking-berry-1088" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://lacking-berry-1088.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title reveal">About <span>Me</span></h2>
+                <div class="about-grid reveal">
+                    <div class="about-text">
+                        <h3>Full Stack Engineer</h3>
+                        <p>
+                            Full stack developer based in Coimbatore, Tamil Nadu. I coordinate with development teams to
+                            design user interfaces and build responsive web and mobile experiences with HTML, JavaScript,
+                            and React.
+                        </p>
+                        <p>
+                            I design, develop, and debug web applications — diagnosing root causes, shipping fixes, and
+                            building wireframes and prototypes from concept through delivery.
+                        </p>
+                        <ul class="about-highlights">
+                            <li><i class="bx bx-check"></i> Front-end: React, Next.js, TypeScript</li>
+                            <li><i class="bx bx-check"></i> Back-end: Node.js, Express, REST APIs</li>
+                            <li><i class="bx bx-check"></i> Data: MongoDB, MySQL, PostgreSQL, Redis</li>
+                        </ul>
                     </div>
-
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./images/healthconnect.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">HealthConnect</h4>
-                    <p class="project-description"> HealthConnect+ doctor appointment website that offers online doctor
-                        appointment booking, provides a user-friendly platform that enables users to browse, book, and
-                        cancel doctor
-                        appointment with ease</p>
-                    <h5 class="project-tech-stack">ReactJS | SQL | NodeJs | MongoDB | AWS</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/HealthConnect" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="http://healthconnect.shubhamthite.online/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
+                    <div class="about-cards">
+                        <article class="info-card">
+                            <i class="bx bx-code-alt"></i>
+                            <h4>Front-End</h4>
+                            <p>React, Next.js, HTML, CSS, Tailwind</p>
+                        </article>
+                        <article class="info-card">
+                            <i class="bx bxs-server"></i>
+                            <h4>Back-End</h4>
+                            <p>Node.js, Express, Socket.io, Python</p>
+                        </article>
+                        <article class="info-card">
+                            <i class="bx bx-data"></i>
+                            <h4>Data & DevOps</h4>
+                            <p>MongoDB, SQL, Git, Vercel</p>
+                        </article>
                     </div>
-
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="./images/ChitChat.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">Whats App Clone</h4>
-                    <p class="project-description"> ChitChat.com is basic Chat application inspired from Whatsapp which
-                        provide
-                        private chat and group chat with other users.</p>
-                    <h5 class="project-tech-stack">Vanilla JS | NodeJs | Socket</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/racial-squirrel-7776" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://whatsapplikeclone.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
-                    </div>
-
+        <section class="section experience" id="experience">
+            <div class="container">
+                <h2 class="section-title reveal">Work <span>Experience</span></h2>
+                <p class="section-subtitle reveal">
+                    <a href="https://www.linkedin.com/in/johnbyju/" target="_blank" rel="noopener noreferrer" class="inline-link">View full profile on LinkedIn <i class="bx bx-link-external"></i></a>
+                </p>
+                <div class="timeline timeline--single">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Jun 2024 – Aug 2024</span>
+                            <h3>Full-Stack Developer</h3>
+                            <p class="timeline-org">
+                                <a href="https://www.linkedin.com/company/xzect" target="_blank" rel="noopener noreferrer">Xzect Labs</a>
+                                · Delhi, India
+                            </p>
+                            <ul class="timeline-details">
+                                <li>Collaborated with the web development team on client-facing UIs using HTML, JavaScript, and React.</li>
+                                <li>Designed, developed, and maintained web applications including debugging and root-cause analysis.</li>
+                                <li>Built responsive layouts for web and mobile, wireframes, and prototypes for client projects.</li>
+                            </ul>
+                            <p class="timeline-tags">React · JavaScript · HTML · CSS · UI Design</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="./images/Avis-img.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">avis</h4>
-                    <p class="project-description"> avis.com an rental website from where you can book a car</p>
-                    <h5 class="project-tech-stack">HTML | CSS | JavaScript</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/hardy-cook-3008" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://symphonious-beignet-bd1351.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
-                    </div>
+        </section>
 
+        <section class="section certifications" id="certifications">
+            <div class="container">
+                <h2 class="section-title reveal">Certificates</h2>
+                <p class="section-subtitle reveal">Licenses and certifications from my LinkedIn profile.</p>
+                <div class="cert-grid">
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="bx bxs-graduation"></i></div>
+                        <span class="cert-date">2020 – 2023</span>
+                        <h3>B.Com — Computer Applications</h3>
+                        <p class="cert-issuer">
+                            <a href="https://www.linkedin.com/school/bharathiar-university/" target="_blank" rel="noopener noreferrer">Bharathiar University</a>
+                        </p>
+                        <p class="cert-desc">Bachelor of Commerce with specialization in Computer Programming and Applications.</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="bx bxs-certification"></i></div>
+                        <span class="cert-date">Aug 2023</span>
+                        <h3>Python</h3>
+                        <p class="cert-issuer">
+                            <a href="https://www.linkedin.com/company/guviofficial/" target="_blank" rel="noopener noreferrer">GUVI Geek Networks, IITM Research Park</a>
+                        </p>
+                        <p class="cert-desc">Certified Python training completed through GUVI.</p>
+                    </article>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="./images/AutoMech-img.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">Firestone</h4>
-                    <p class="project-description"> Firestone which sales Tires,automobile-parts and provdies services
-                    </p>
-                    <h5 class="project-tech-stack">MongoDB | NodeJS | Express</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/numerous-death-4914" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://phenomenal-dolphin-df756c.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
-                    </div>
+        </section>
 
+        <section class="section skills" id="skills">
+            <div class="container">
+                <h2 class="section-title reveal">Tech <span>Stack</span></h2>
+                <p class="section-subtitle reveal">Tools and technologies I work with regularly.</p>
+                <div class="skills-grid reveal">
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" width="28" height="28" loading="lazy" /><span>React</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Next.js</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" width="28" height="28" loading="lazy" /><span>TypeScript</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Node.js</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Express</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="28" height="28" loading="lazy" /><span>JavaScript</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Python</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" width="28" height="28" loading="lazy" /><span>MongoDB</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" width="28" height="28" loading="lazy" /><span>MySQL</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" width="28" height="28" loading="lazy" /><span>PostgreSQL</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Redis</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Socket.io</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="28" height="28" loading="lazy" /><span>HTML5</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="28" height="28" loading="lazy" /><span>CSS3</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Git</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" width="28" height="28" loading="lazy" /><span>Tailwind</span></div>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="./images/lyst-img.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">Elyst</h4>
-                    <p class="project-description">e-commerce website from where you can buy different products.</p>
-                    <h5 class="project-tech-stack">HTML | CSS | JavaScript </h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/gabby-squirrel-8633" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://elyst.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
-                    </div>
+        </section>
 
+        <section class="section projects" id="projects">
+            <div class="container">
+                <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+                <p class="section-subtitle reveal">Selected work from my GitHub — live demos where available.</p>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--a"><i class="bx bx-store"></i></div>
+                        <div class="project-body">
+                            <h3>Backstage</h3>
+                            <p>Full-stack application with a deployed production build on Vercel.</p>
+                            <p class="project-stack">TypeScript · React · Node</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/backstage" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://backstage-bay.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--b"><i class="bx bx-trophy"></i></div>
+                        <div class="project-body">
+                            <h3>Cricket League</h3>
+                            <p>Interactive cricket league app with scheduling and match management.</p>
+                            <p class="project-stack">JavaScript · Express</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/cricket-league" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://cricketleague.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--c"><i class="bx bx-bot"></i></div>
+                        <div class="project-body">
+                            <h3>Stock Advisor Chatbot</h3>
+                            <p>AI-assisted chatbot for stock market insights and guidance.</p>
+                            <p class="project-stack">TypeScript · Next.js</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/stock-market-advisor-chatbot" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://stock-market-advisor-chatbot.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--d"><i class="bx bx-link"></i></div>
+                        <div class="project-body">
+                            <h3>URL Shortener</h3>
+                            <p>Shorten long URLs and serve them through a clean, fast interface.</p>
+                            <p class="project-stack">Python · Flask</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/url-shortner" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://url-shortner-nine-drab.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--e"><i class="bx bx-shopping-bag"></i></div>
+                        <div class="project-body">
+                            <h3>E-Commerce Template</h3>
+                            <p>Responsive storefront template with product layout and checkout flow.</p>
+                            <p class="project-stack">HTML · CSS · JavaScript</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/Ecommerce-Template" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://ecommerce-template-navy.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-thumb project-thumb--f"><i class="bx bx-line-chart"></i></div>
+                        <div class="project-body">
+                            <h3>Marma FinTech</h3>
+                            <p>Financial technology web app with modern UI and deployed demo.</p>
+                            <p class="project-stack">JavaScript · React</p>
+                            <div class="project-links">
+                                <a href="https://github.com/johnbyju/exMarmaFin" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i> Code</a>
+                                <a href="https://marmafintech.vercel.app" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i> Live</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./images/Chat App.png" alt="">
-                <div class="project-layer">
-                    <h4 class="project-title">Chat Application</h4>
-                    <p class="project-description"> basic Chat application which provide chat with other users.</p>
-                    <h5 class="project-tech-stack">Vanilla JS | NodeJs | Socket</h5>
-                    <div class="projectlinks">
-                        <a href="https://github.com/vaibhzz101/ChatApplication" class="project-github-link"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://vaibhzz-chat-app.netlify.app/" class="project-deployed-link"><i
-                                class='bx bxl-netlify'></i></a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </section> -->
-
-    <!-- Project Section End -->
-
-
-
-    <!-- Github static start -->
-
-<!--     <section id="github-statics">
-        <h2 class="heading">Github
-            <span class="span">Statistics</span>
-        </h2>
-        <div class="container">
-            <div>
-                <div class="react-activity-calender calender">
-                    Loading the data for you
-                </div>
-                <br />
-                <div style="align-items: center;" class="stats">
-                    <a href="https://github.com/johnbyju">
-                        <img id="github-streak-stats"
-                            src="https://github-readme-streak-stats.herokuapp.com?user=johnbyju&theme=vue-dark&hide_border=true"
-                            alt="GitHub Streak" alt="">
+                <div class="projects-more reveal">
+                    <a href="https://github.com/johnbyju?tab=repositories" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-github"></i> See all repositories
                     </a>
-                    <br />
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnbyju&theme=tokyonight&show_icons=true&hide_border=true&layout=compact"
-                        alt="">
                 </div>
             </div>
-        </div>
-    </section> -->
+        </section>
 
+        <section class="section github-stats" id="github">
+            <div class="container">
+                <h2 class="section-title reveal">GitHub <span>Activity</span></h2>
+                <div class="stats-grid reveal">
+                    <a href="https://github.com/johnbyju" target="_blank" rel="noopener noreferrer" class="stats-card">
+                        <img src="https://github-readme-streak-stats.herokuapp.com?user=johnbyju&theme=dark&hide_border=true&background=0D1117&ring=00E5C0&fire=00E5C0&currStreakLabel=00E5C0" alt="GitHub contribution streak for johnbyju" loading="lazy" />
+                    </a>
+                    <a href="https://github.com/johnbyju" target="_blank" rel="noopener noreferrer" class="stats-card">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnbyju&theme=tokyonight&hide_border=true&layout=compact&bg_color=0d1117" alt="Top languages on GitHub for johnbyju" loading="lazy" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title reveal">Let's <span>Connect</span></h2>
+                <p class="section-subtitle reveal">Open to collaborations, freelance work, and full-time opportunities.</p>
+                <div class="contact-grid reveal">
+                    <a href="mailto:johnbyju8@gmail.com" class="contact-card">
+                        <i class="bx bx-envelope"></i>
+                        <span>johnbyju8@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/johnbyju/" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-linkedin"></i>
+                        <span>linkedin.com/in/johnbyju</span>
+                    </a>
+                    <a href="https://github.com/johnbyju" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <i class="bx bxl-github"></i>
+                        <span>github.com/johnbyju</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> John Byju. Built with HTML, CSS &amp; JavaScript.</p>
+        <a href="#home" class="back-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
