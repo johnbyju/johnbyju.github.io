@@ -24,6 +24,7 @@
   --font: "Inter", system-ui, sans-serif;
   --mono: "JetBrains Mono", monospace;
   --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --bg-nav-mobile: rgba(10, 14, 23, 0.98);
 }
 
 body.light-mode {
@@ -38,6 +39,7 @@ body.light-mode {
   --accent-glow: rgba(13, 148, 136, 0.2);
   --gradient-1: #4f46e5;
   --gradient-2: #db2777;
+  --bg-nav-mobile: rgba(248, 250, 252, 0.98);
 }
 
 /* Custom Scrollbar */
@@ -844,7 +846,7 @@ ul {
     align-items: center;
     padding: 2rem;
     gap: 2rem;
-    background: rgba(10, 14, 23, 0.98);
+    background: var(--bg-nav-mobile);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     transform: translateY(-120%);
@@ -1283,6 +1285,10 @@ body.light-mode #preloader {
 #preloader.fade-out {
   opacity: 0;
   visibility: hidden;
+}
+
+.experience {
+  overflow: hidden;
 }
 
 /* macOS IDE Experience Track & Cards (Horizontal Slider) */
