@@ -8,29 +8,48 @@ export default function Header({ theme, toggleTheme }) {
   const [sigError, setSigError] = useState(false);
 
   useEffect(() => {
+    // Simple window scroll listener for header styled background
     const handleScroll = () => {
-      // Scrolled header background style toggle
       setScrolled(window.scrollY > 40);
-
-      // Active section highlight logic
-      const scrollY = window.scrollY + 120;
-      const sections = ['home', 'about', 'experience', 'certifications', 'skills', 'projects', 'contact'];
-      for (const secId of sections) {
-        const el = document.getElementById(secId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollY >= top && scrollY < top + height) {
-            setActiveSection(secId);
-            break;
-          }
-        }
-      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // initial call
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // IntersectionObserver for highly performant active section tracking
+    const sections = ['home', 'about', 'experience', 'certifications', 'skills', 'projects', 'contact'];
+    
+    // We want to detect when the section is in the upper portion of the viewport
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -65% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((secId) => {
+      const el = document.getElementById(secId);
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      sections.forEach((secId) => {
+        const el = document.getElementById(secId);
+        if (el) {
+          observer.unobserve(el);
+        }
+      });
+    };
   }, []);
 
   const closeMenu = () => setMenuOpen(false);

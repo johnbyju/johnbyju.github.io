@@ -5,15 +5,26 @@ export default function Preloader() {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    // Lock scrolling on mount
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+
     const timer = setTimeout(() => {
       setFadeOut(true);
       const hideTimer = setTimeout(() => {
         setLoading(false);
+        // Unlock scrolling
+        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
       }, 600); // matches CSS fade out transition time
       return () => clearTimeout(hideTimer);
     }, 2500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
+    };
   }, []);
 
   if (!loading) return null;

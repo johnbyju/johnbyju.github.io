@@ -84,11 +84,8 @@ export default function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          } else {
-            // Only hide if the element is below viewport (user scrolled up past it)
-            if (entry.boundingClientRect.top > 0) {
-              entry.target.classList.remove('visible');
-            }
+            // Unobserve once it has been revealed to prevent layout calculations and performance lag on mobile
+            revealObserver.unobserve(entry.target);
           }
         });
       },

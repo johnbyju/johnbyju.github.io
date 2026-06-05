@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const path = require('path');
+import { test, expect } from '@playwright/test';
+import path from 'path';
 
 test.describe('John Byju Developer Portfolio - macOS Cards Slider Tests', () => {
   let fileUrl;

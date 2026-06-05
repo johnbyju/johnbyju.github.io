@@ -75,6 +75,14 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100% !important;
+  overscroll-behavior: none !important;
+  touch-action: none !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -270,6 +278,7 @@ ul {
 /* Hero */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr; /* Gives more width to the visual side */
   align-items: center;
