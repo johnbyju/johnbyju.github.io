@@ -1678,3 +1678,45 @@ body.light-mode .restore-container {
 ::view-transition-new(root) {
   animation: circular-reveal 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Responsive Experience Track optimization for Mobile */
+@media (max-width: 768px) {
+  .experience-track {
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 1.6rem 0;
+    margin: 0;
+    gap: 2.4rem;
+  }
+  
+  .ide-card {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .code-view {
+    font-size: 1.15rem;
+  }
+  .line-num {
+    width: 36px;
+    padding-right: 0.8rem;
+  }
+  .line-code {
+    padding-left: 1rem;
+  }
+  .ide-titlebar {
+    padding: 0 1rem;
+  }
+  .editor-tabs {
+    padding-left: 1rem;
+  }
+  .tab {
+    padding: 0 1rem;
+    font-size: 1.15rem;
+  }
+}
+

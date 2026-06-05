@@ -1645,3 +1645,112 @@ body.light-mode .restore-container {
   gap: 0.6rem;
 }
 
+/* Live Clock in Header */
+.live-clock {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  user-select: none;
+}
+
+.clock-time {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+}
+
+.clock-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.clock-ampm {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: var(--text);
+}
+
+.clock-date {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+@media (max-width: 968px) {
+  .live-clock {
+    display: none !important;
+  }
+}
+
+/* Custom View Transition circular theme toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+@keyframes circular-reveal {
+  from {
+    clip-path: circle(0px at var(--x) var(--y));
+  }
+  to {
+    clip-path: circle(var(--r) at var(--x) var(--y));
+  }
+}
+
+::view-transition-new(root) {
+  animation: circular-reveal 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive Experience Track optimization for Mobile */
+@media (max-width: 768px) {
+  .experience-track {
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 1.6rem 0;
+    margin: 0;
+    gap: 2.4rem;
+  }
+  
+  .ide-card {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .code-view {
+    font-size: 1.15rem;
+  }
+  .line-num {
+    width: 36px;
+    padding-right: 0.8rem;
+  }
+  .line-code {
+    padding-left: 1rem;
+  }
+  .ide-titlebar {
+    padding: 0 1rem;
+  }
+  .editor-tabs {
+    padding-left: 1rem;
+  }
+  .tab {
+    padding: 0 1rem;
+    font-size: 1.15rem;
+  }
+}
+
+
