@@ -46,8 +46,10 @@ export default function App() {
       return;
     }
 
-    const x = e.clientX ?? window.innerWidth / 2;
-    const y = e.clientY ?? window.innerHeight / 2;
+    // Get client position or fallback to the button's center (useful on mobile/taps)
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX || (rect.left + rect.width / 2);
+    const y = e.clientY || (rect.top + rect.height / 2);
     const endRadius = Math.hypot(
       Math.max(x, window.innerWidth - x),
       Math.max(y, window.innerHeight - y)

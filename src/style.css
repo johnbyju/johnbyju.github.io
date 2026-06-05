@@ -1233,6 +1233,34 @@ body.light-mode #preloader {
   overflow: visible;
 }
 
+.sig-mask-rect {
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: sig-write 2s cubic-bezier(0.42, 0, 0.58, 1) 0.5s forwards;
+  will-change: transform;
+}
+
+.sig-dot {
+  filter: drop-shadow(0 0 8px var(--accent));
+  animation: sig-dot-move 2s cubic-bezier(0.42, 0, 0.58, 1) 0.5s forwards,
+             sig-dot-fade 2s cubic-bezier(0.42, 0, 0.58, 1) 0.5s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes sig-write {
+  to { transform: scaleX(1); }
+}
+
+@keyframes sig-dot-move {
+  from { transform: translateX(0); }
+  to { transform: translateX(290px); }
+}
+
+@keyframes sig-dot-fade {
+  0%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .preloader-bar {
   width: 140px;
   height: 2px;
