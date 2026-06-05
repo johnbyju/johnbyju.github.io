@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { flushSync } from 'react-dom';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -60,10 +61,8 @@ export default function App() {
     document.documentElement.style.setProperty('--r', `${endRadius}px`);
 
     document.startViewTransition(() => {
-      import('react-dom').then(({ flushSync }) => {
-        flushSync(() => {
-          setTheme(nextTheme);
-        });
+      flushSync(() => {
+        setTheme(nextTheme);
       });
     });
   };

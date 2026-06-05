@@ -1228,6 +1228,39 @@ body.light-mode #preloader {
   width: min(320px, 90%);
 }
 
+.preloader-building {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  font-family: var(--mono);
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+}
+
+.pulse-dots {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.pulse-dots span {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: dot-pulse 1.4s infinite ease-in-out both;
+}
+
+.pulse-dots span:nth-child(1) { animation-delay: -0.32s; }
+.pulse-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes dot-pulse {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
 .preloader-sig {
   width: 100%;
   overflow: visible;
