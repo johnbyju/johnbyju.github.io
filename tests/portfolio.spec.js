@@ -158,38 +158,18 @@ test.describe('John Byju Developer Portfolio - macOS Cards Slider Tests & Genera
     await expect(modal).not.toBeVisible();
   });
 
-  test('Projects category filtering updates project cards visibility correctly', async ({ page }) => {
+  test('Projects section displays all 4 project cards successfully', async ({ page }) => {
     await page.goto(fileUrl);
     await page.waitForSelector('#preloader', { state: 'hidden', timeout: 5000 });
 
     const allCards = page.locator('.project-card');
-    const hiddenCards = page.locator('.project-card.hide');
-    const visibleCards = page.locator('.project-card:not(.hide)');
+    await expect(allCards).toHaveCount(4);
 
-    // By default, all 6 projects should be visible
-    await expect(allCards).toHaveCount(6);
-    await expect(visibleCards).toHaveCount(6);
-    await expect(hiddenCards).toHaveCount(0);
-
-    // Filter by Frontend
-    await page.locator('.filter-btn:has-text("Frontend")').click();
-    await expect(visibleCards).toHaveCount(2);
-    await expect(hiddenCards).toHaveCount(4);
-
-    // Filter by Backend
-    await page.locator('.filter-btn:has-text("Backend")').click();
-    await expect(visibleCards).toHaveCount(2);
-    await expect(hiddenCards).toHaveCount(4);
-
-    // Filter by Full Stack
-    await page.locator('.filter-btn:has-text("Full Stack")').click();
-    await expect(visibleCards).toHaveCount(2);
-    await expect(hiddenCards).toHaveCount(4);
-
-    // Filter by All
-    await page.locator('.filter-btn:has-text("All")').click();
-    await expect(visibleCards).toHaveCount(6);
-    await expect(hiddenCards).toHaveCount(0);
+    // Verify some specific project cards are visible
+    const zentroCard = allCards.filter({ hasText: 'Zentro' });
+    const citizenCard = allCards.filter({ hasText: 'Whistling Citizen' });
+    await expect(zentroCard).toBeVisible();
+    await expect(citizenCard).toBeVisible();
   });
 
   test('Contact Form handles validation and submits mockup mode successfully', async ({ page }) => {

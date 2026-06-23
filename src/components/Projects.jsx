@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const projectsList = [
   {
@@ -48,41 +48,18 @@ const projectsList = [
 ];
 
 export default function Projects() {
-  const [filter, setFilter] = useState('all');
-
-  const filterOptions = [
-    { value: 'all', label: 'All' },
-    { value: 'frontend', label: 'Frontend' },
-    { value: 'backend', label: 'Backend' },
-    { value: 'fullstack', label: 'Full Stack' }
-  ];
-
   return (
     <section className="section projects" id="projects">
       <div className="container">
         <h2 className="section-title reveal">Featured <span>Projects</span></h2>
         <p className="section-subtitle reveal">Selected work from my GitHub — live demos where available.</p>
 
-        <div className="project-filters reveal">
-          {filterOptions.map((opt) => (
-            <button
-              key={opt.value}
-              className={`filter-btn ${filter === opt.value ? 'active' : ''}`}
-              onClick={() => setFilter(opt.value)}
-              aria-label={`Show ${opt.label} projects`}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-
         <div className="projects-grid">
           {projectsList.map((project) => {
-            const isHidden = filter !== 'all' && project.category !== filter;
             return (
               <article
                 key={project.id}
-                className={`project-card reveal ${isHidden ? 'hide' : ''}`}
+                className="project-card reveal"
                 data-category={project.category}
               >
                 <div className={project.thumbClass}>
