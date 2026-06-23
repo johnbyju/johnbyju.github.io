@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Byju - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.35;
+      font-size: 11px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* A4 container setup for screen viewing, print overrides this */
+    .resume-container {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 35px;
+    }
+
+    /* Header styling */
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header-main h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+    .header-main h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 2px;
+    }
+    .header-contact {
+      text-align: right;
+      font-size: 10px;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .header-contact a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Layout divisions */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-left: 1px solid #f1f5f9;
+      padding-left: 15px;
+    }
+
+    /* Section components */
+    .section-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Objective */
+    .objective-text {
+      color: #334155;
+      font-size: 10px;
+      text-align: justify;
+      margin-bottom: 4px;
+    }
+
+    /* Skills layout */
+    .skills-category {
+      margin-bottom: 6px;
+    }
+    .skills-category-title {
+      font-weight: 700;
+      color: #475569;
+      font-size: 9px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .skills-list {
+      color: #1e293b;
+      font-size: 10px;
+      line-height: 1.35;
+    }
+
+    /* List items / general blocks */
+    .experience-item, .project-item, .cert-item {
+      margin-bottom: 8px;
+    }
+    .experience-item:last-child, .project-item:last-child, .cert-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-meta {
+      font-size: 9px;
+      font-weight: 600;
+      color: #2563eb;
+      text-align: right;
+    }
+    .item-subtitle-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.5px;
+      font-weight: 500;
+      color: #475569;
+      margin-bottom: 3px;
+    }
+    .item-desc {
+      color: #334155;
+      font-size: 9.5px;
+      margin-left: 10px;
+      list-style-type: disc;
+    }
+    .item-desc li {
+      margin-bottom: 2px;
+      text-align: justify;
+    }
+    .item-desc li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Project specific links */
+    .project-links {
+      font-size: 9px;
+      font-weight: 600;
+      margin-top: 1px;
+      color: #475569;
+    }
+    .project-links a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Education styling */
+    .education-item {
+      margin-bottom: 4px;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-school {
+      font-weight: 500;
+      color: #475569;
+      font-size: 9.5px;
+      margin-top: 1px;
+    }
+    .edu-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      color: #64748b;
+      margin-top: 1px;
+    }
+
+    /* Print media overrides */
+    @media print {
+      body {
+        background-color: white;
+      }
+      .resume-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /* Prevent clipping / browsers adding headers */
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    <header>
+      <div class="header-main">
+        <h1>John Byju</h1>
+        <h2>Full Stack & Software Developer</h2>
+      </div>
+      <div class="header-contact">
+        <div>Coimbatore, India | +91 80980 46498</div>
+        <div><a href="mailto:johnbyju8@gmail.com">johnbyju8@gmail.com</a></div>
+        <div>
+          <a href="https://johnbyju.github.io" target="_blank">johnbyju.github.io</a> | 
+          <a href="https://github.com/johnbyju" target="_blank">GitHub</a> | 
+          <a href="https://linkedin.com/in/johnbyju" target="_blank">LinkedIn</a> | 
+          <a href="https://leetcode.com/johnbyju14" target="_blank">LeetCode</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <!-- Left Column: Skills, Education, Certifications -->
+      <section class="left-column">
+        <div>
+          <h3 class="section-title">Technical Skills</h3>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">Programming Languages</h4>
+            <div class="skills-list">JavaScript, TypeScript, HTML, CSS</div>
+          </div>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">JS Frameworks / Libraries</h4>
+            <div class="skills-list">ReactJS, Next.js, ES6, Redux</div>
+          </div>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">CSS Frameworks / Libraries</h4>
+            <div class="skills-list">Tailwind CSS, Bootstrap, Shadcn, SASS</div>
+          </div>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">Backend & Database</h4>
+            <div class="skills-list">Node.js, Express.js, REST APIs, Prisma ORM, MongoDB, SQL</div>
+          </div>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">VCS & Package Managers</h4>
+            <div class="skills-list">Git, GitHub, NPM</div>
+          </div>
+          
+          <div class="skills-category">
+            <h4 class="skills-category-title">Design & Tooling</h4>
+            <div class="skills-list">VS Code, Postman, Figma, Canva</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">Education</h3>
+          <div class="education-item">
+            <div class="edu-degree">B.Com Computer Application</div>
+            <div class="edu-school">Sree Ramu College of Arts and Science</div>
+            <div class="edu-details">
+              <span>Bharathiar University</span>
+              <span>2020 – 2023 | 7.1 CGPA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Career Objective, Experience, Projects -->
+      <section class="right-column">
+        <div>
+          <h3 class="section-title">Career Objective</h3>
+          <p class="objective-text">
+            Keen on leveraging my grasp of web-based application development, along with my expertise in MERN stack development and code management, to make a valuable contribution in a professional setting.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="section-title">Work Experience</h3>
+          
+          <!-- Marma Fintech -->
+          <div class="experience-item">
+            <div class="item-header">
+              <span class="item-title">Marma Fintech</span>
+              <span class="item-meta">Jan 2025 – Present</span>
+            </div>
+            <div class="item-subtitle-row">
+              <span>SDE-III (Full-time)</span>
+              <span>Coimbatore, India (On-site)</span>
+            </div>
+            <ul class="item-desc">
+              <li>Develop and ship production-ready features for fintech products using React and TypeScript.</li>
+              <li>Build highly responsive, client-facing web applications focusing on performance optimization.</li>
+              <li>Collaborate with cross-functional teams on end-to-end product delivery and code reviews.</li>
+            </ul>
+          </div>
+
+          <!-- ThroughBit -->
+          <div class="experience-item">
+            <div class="item-header">
+              <span class="item-title">ThroughBit</span>
+              <span class="item-meta">Sep 2024 – Jan 2025</span>
+            </div>
+            <div class="item-subtitle-row">
+              <span>Frontend Developer (Internship)</span>
+              <span>Coimbatore, India (On-site)</span>
+            </div>
+            <ul class="item-desc">
+              <li>Built and maintained client-side web applications for digital asset products.</li>
+              <li>Implemented modern, responsive UI components and integrated secure state workflows.</li>
+              <li>Contributed to front-end and full-stack web application development.</li>
+            </ul>
+          </div>
+
+          <!-- Xzect Labs -->
+          <div class="experience-item">
+            <div class="item-header">
+              <span class="item-title">Xzect Labs</span>
+              <span class="item-meta">Jun 2024 – Aug 2024</span>
+            </div>
+            <div class="item-subtitle-row">
+              <span>Full Stack Developer (Internship)</span>
+              <span>Delhi, India (Remote)</span>
+            </div>
+            <ul class="item-desc">
+              <li>Built backend APIs and services using Node.js, Express.js, and MongoDB.</li>
+              <li>Collaborated on building interactive, client-facing user interfaces using React.</li>
+              <li>Designed, developed, and debugged full-stack application features.</li>
+              <li>Delivered highly responsive mobile and web wireframe layouts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">Projects</h3>
+
+          <!-- Zentro -->
+          <div class="project-item">
+            <div class="item-header">
+              <span class="item-title">Zentro</span>
+              <span class="item-meta">Next.js · React · WebGPU</span>
+            </div>
+            <p style="font-size: 9.5px; color: #334155; text-align: justify; margin-bottom: 2px;">
+              Browser-Based Local AI App Creator. Creates, tests, and persists interactive web applications fully offline in the browser using local WebGPU LLMs, a premium code editor, and sandboxed previews.
+            </p>
+            <div class="project-links">
+              <span>Live: <a href="https://zentro-rust.vercel.app" target="_blank">zentro-rust.vercel.app</a></span> | 
+              <span>Code: <a href="https://github.com/johnbyju/zentro" target="_blank">github.com/johnbyju/zentro</a></span>
+            </div>
+          </div>
+
+          <!-- Whistling Citizen -->
+          <div class="project-item">
+            <div class="item-header">
+              <span class="item-title">Whistling Citizen</span>
+              <span class="item-meta">Next.js · React · Express · Node</span>
+            </div>
+            <p style="font-size: 9.5px; color: #334155; text-align: justify; margin-bottom: 2px;">
+              Civic accountability and issue reporting platform designed for citizens to report local civic issues (waste management, road safety, grievances) and track resolutions to create citywide impact.
+            </p>
+            <div class="project-links">
+              <span>Live: <a href="https://whistlingcitizen.com" target="_blank">whistlingcitizen.com</a></span> | 
+              <span>Code: <a href="https://github.com/johnbyju/whistlingcitizen" target="_blank">github.com/johnbyju/whistlingcitizen</a></span>
+            </div>
+          </div>
+
+          <!-- Quests & Games -->
+          <div class="project-item">
+            <div class="item-header">
+              <span class="item-title">Quests & Games</span>
+              <span class="item-meta">React · Vite · CSS</span>
+            </div>
+            <p style="font-size: 9.5px; color: #334155; text-align: justify; margin-bottom: 2px;">
+              Interactive quest gaming platform featuring structured quests in games, competitive gaming challenges, and skill-based progression for immersive and engaging gameplay.
+            </p>
+            <div class="project-links">
+              <span>Live: <a href="https://questsandgames.com" target="_blank">questsandgames.com</a></span> | 
+              <span>Code: <a href="https://github.com/johnbyju/questsandgames" target="_blank">github.com/johnbyju/questsandgames</a></span>
+            </div>
+          </div>
+
+          <!-- TheBitcoin -->
+          <div class="project-item">
+            <div class="item-header">
+              <span class="item-title">TheBitcoin</span>
+              <span class="item-meta">React · Express · Node</span>
+            </div>
+            <p style="font-size: 9.5px; color: #334155; text-align: justify; margin-bottom: 2px;">
+              Cryptocurrency information, tracking, and wallet system built during the ThroughBit internship. Provides real-time asset tracking, secure transaction flows, and blockchain educational resources.
+            </p>
+            <div class="project-links">
+              <span>Live: <a href="https://thebitcoin.com" target="_blank">thebitcoin.com</a></span> | 
+              <span>Code: <a href="https://github.com/throughbit/TheBitcoin.com" target="_blank">github.com/throughbit/TheBitcoin.com</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>

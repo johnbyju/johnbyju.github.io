@@ -2,70 +2,48 @@ import React, { useState } from 'react';
 
 const projectsList = [
   {
-    id: 'backstage',
-    title: 'Backstage',
-    desc: 'Full-stack application with a deployed production build on Vercel.',
+    id: 'zentro',
+    title: 'Zentro',
+    desc: 'Browser-Based Local AI App Creator. Create, test, and persist interactive web applications offline in the browser using local WebGPU LLMs, a premium code editor, and sandboxed previews.',
     category: 'fullstack',
-    stack: 'TypeScript · React · Node',
-    codeLink: 'https://github.com/johnbyju/backstage',
-    liveLink: 'https://backstage-bay.vercel.app',
+    stack: 'TypeScript · React · Next.js · WebGPU',
+    codeLink: 'https://github.com/johnbyju/zentro',
+    liveLink: 'https://zentro-rust.vercel.app/',
     thumbClass: 'project-thumb project-thumb--a',
-    icon: 'bx bx-store'
+    icon: 'bx bx-cpu'
   },
   {
-    id: 'cricket-league',
-    title: 'Cricket League',
-    desc: 'Interactive cricket league app with scheduling and match management.',
-    category: 'backend',
-    stack: 'JavaScript · Express',
-    codeLink: 'https://github.com/johnbyju/cricket-league',
-    liveLink: 'https://cricketleague.vercel.app',
-    thumbClass: 'project-thumb project-thumb--b',
-    icon: 'bx bx-trophy'
-  },
-  {
-    id: 'stock-chatbot',
-    title: 'Stock Advisor Chatbot',
-    desc: 'AI-assisted chatbot for stock market insights and guidance.',
+    id: 'whistling-citizen',
+    title: 'Whistling Citizen',
+    desc: 'Civic accountability and issue reporting platform designed for citizens to report local civic issues (waste management, road safety, grievances) and create citywide impact.',
     category: 'fullstack',
-    stack: 'TypeScript · Next.js',
-    codeLink: 'https://github.com/johnbyju/stock-market-advisor-chatbot',
-    liveLink: 'https://stock-market-advisor-chatbot.vercel.app',
+    stack: 'TypeScript · React · Next.js · Express',
+    codeLink: 'https://github.com/johnbyju/whistlingcitizen',
+    liveLink: 'https://whistlingcitizen.com',
+    thumbClass: 'project-thumb project-thumb--b',
+    icon: 'bx bx-bullseye'
+  },
+  {
+    id: 'quests-games',
+    title: 'Quests & Games',
+    desc: 'Interactive quest gaming system featuring structured quests in games, competitive challenges, and skill-based progression for immersive and engaging gameplay.',
+    category: 'frontend',
+    stack: 'JavaScript · React · Vite',
+    codeLink: 'https://github.com/johnbyju/questsandgames',
+    liveLink: 'https://questsandgames.com',
     thumbClass: 'project-thumb project-thumb--c',
-    icon: 'bx bx-bot'
+    icon: 'bx bx-game'
   },
   {
-    id: 'url-shortener',
-    title: 'URL Shortener',
-    desc: 'Shorten long URLs and serve them through a clean, fast interface.',
-    category: 'backend',
-    stack: 'Python · Flask',
-    codeLink: 'https://github.com/johnbyju/url-shortner',
-    liveLink: 'https://url-shortner-nine-drab.vercel.app',
+    id: 'thebitcoin',
+    title: 'TheBitcoin',
+    desc: 'First Project from ThroughBit. A cryptocurrency information, tracking, and wallet platform providing real-time tracking, secure transactions, and educational resources.',
+    category: 'frontend',
+    stack: 'JavaScript · React · Express',
+    codeLink: 'https://github.com/throughbit/TheBitcoin.com',
+    liveLink: 'https://thebitcoin.com',
     thumbClass: 'project-thumb project-thumb--d',
-    icon: 'bx bx-link'
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-Commerce Template',
-    desc: 'Responsive storefront template with product layout and checkout flow.',
-    category: 'frontend',
-    stack: 'HTML · CSS · JavaScript',
-    codeLink: 'https://github.com/johnbyju/Ecommerce-Template',
-    liveLink: 'https://ecommerce-template-navy.vercel.app',
-    thumbClass: 'project-thumb project-thumb--e',
-    icon: 'bx bx-shopping-bag'
-  },
-  {
-    id: 'marma-fintech',
-    title: 'Marma FinTech',
-    desc: 'Financial technology web app with modern UI and deployed demo.',
-    category: 'frontend',
-    stack: 'JavaScript · React',
-    codeLink: 'https://github.com/johnbyju/exMarmaFin',
-    liveLink: 'https://marmafintech.vercel.app',
-    thumbClass: 'project-thumb project-thumb--f',
-    icon: 'bx bx-line-chart'
+    icon: 'bx bx-bitcoin'
   }
 ];
 
